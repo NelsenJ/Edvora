@@ -127,12 +127,3 @@ server/
 - **dotenv**: Untuk mengelola variabel lingkungan.
 - **cors**: Untuk mengizinkan cross-origin requests.
 ```
-
----
-
-### Penjelasan
-1. **Struktur Frontend dan Backend**: Memudahkan pengembang untuk memahami alur proyek dengan struktur folder yang jelas.
-2. **Cara Menjalankan**: Memberikan langkah-langkah detail agar pengembang baru dapat langsung menjalankan proyek.
-3. **Skrip NPM dan Dependensi**: Menyediakan daftar perintah dan library utama yang digunakan.
-
-Apakah Anda memerlukan tambahan spesifik untuk README ini? 😊

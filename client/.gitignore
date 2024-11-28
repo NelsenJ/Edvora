@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+
+# Editor-specific
+*.swp
+*.suo
+*.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.cache
+
+# Tailwind CSS (jika digunakan)
+tailwind.config.js
+postcss.config.js

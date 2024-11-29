@@ -1,19 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Home from './pages/Home';
 
 const App = () => {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('http://localhost:5000/api')
-      .then((response) => response.json())
-      .then((data) => setMessage(data.message));
-  }, []);
-
-  return (
-    <div>
-      <h1>{message || 'Loading...'}</h1>
-    </div>
-  );
+  return <Home />;
 };
 
 export default App;

@@ -2,94 +2,154 @@ import React, { useState } from "react";
 
 const Sidebar = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const menuItems = [
+    { icon: "bx-grid-alt", label: "Dashboard", link: "/dashboard" },
+    { icon: "bx-line-chart", label: "Analytics", link: "/analytics" },
+    { icon: "bx-folder", label: "Projects", link: "/projects" },
+    { icon: "bx-task", label: "Tasks", link: "/tasks" },
+    { icon: "bx-message-dots", label: "Messages", link: "/messages" },
+    { icon: "bx-calendar", label: "Calendar", link: "/calendar" },
+    { icon: "bx-slider", label: "Settings", link: "/settings" },
+    { icon: "bx-help-circle", label: "Support", link: "/support" },
+  ];
+
   return (
-    <div className="d-flex">
+    <div className="d-flex position-relative">
       {/* Sidebar */}
       <div
-        className={`bg-primary text-white vh-100 d-flex flex-column ${
-          isToggled ? "p-3" : "p-1"
+        className={`vh-100 d-flex flex-column shadow ${
+          darkMode ? "bg-dark text-white" : "bg-white text-dark"
         }`}
         style={{
-          width: isToggled ? "244px" : "80px",
-          transition: "width 0.3s",
-          position: "relative",
+          minWidth: isToggled ? "200px" : "80px",
+          transition: "min-width 0.3s ease",
         }}
       >
         {/* Logo */}
-        <div className="text-center mb-3">
+        <div
+          className={`d-flex align-items-center p-3`}
+          style={{ transition: "all 0.3s ease" }}
+        >
           <img
             src="/logo.png"
             alt="Logo"
             style={{
-              width: isToggled ? "120px" : "70px",
+              width: "50px",
               height: "auto",
-              transition: "width 0.3s",
+              transition: "all 0.3s ease",
             }}
           />
-        </div>
-
-        {/* User Section */}
-        <div
-          className={`mb-4 ${
-            isToggled ? "text-start" : "text-center"
-          }`}
-        >
-          <i class='bx bxs-user-circle' ></i>
           {isToggled && (
-            <div className="mt-2">
-              <p className="mb-0">John Doe</p>
-              <small className="text-muted">Administrator</small>
-            </div>
+            <span className="ms-3 fw-bold" style={{ fontSize: "1.2rem" }}>
+              Edvora
+            </span>
           )}
         </div>
 
-        {/* Navigation */}
-        <ul className="list-unstyled flex-grow-1">
-          <li className="mb-2">
-            <a href="/" className="text-white text-decoration-none d-flex align-items-center">
-              <i className="bx bx-home me-2"></i>
-              {isToggled && <span>Home</span>}
-            </a>
-          </li>
-          <li className="mb-2">
-            <a href="/about" className="text-white text-decoration-none d-flex align-items-center">
-              <i className="bx bx-info-circle me-2"></i>
-              {isToggled && <span>About</span>}
-            </a>
-          </li>
-          <li className="mb-2">
-            <a href="/functions" className="text-white text-decoration-none d-flex align-items-center">
-              <i className="bx bx-cog me-2"></i>
-              {isToggled && <span>Other Functions</span>}
-            </a>
-          </li>
+        {/* User Profile */}
+        <div
+          className="d-flex flex-column align-items-center pb-3 px-3"
+          style={{ gap: "10px" }}
+        >
+          <div className="d-flex align-items-center w-100">
+            <div
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                border: "3px solid black",
+                marginLeft: "2px"
+              }}
+            ></div>
+            {isToggled && (
+              <div className="ms-3">
+                <div>Nama User</div>
+                <div className="text-muted">Guru</div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <ul className="list-unstyled flex-grow-1 d-flex flex-column align-items-center">
+          {menuItems.map((item, index) => (
+            <li
+              key={index}
+              className="w-100"
+              style={{
+                textAlign: "left",
+                paddingLeft: "7px", // Menjaga posisi ikon tetap stabil
+                transition: "all 0.3s ease",
+              }}
+            >
+              <a
+                href={item.link}
+                className="d-flex align-items-center text-decoration-none"
+                style={{
+                  gap: "25px",
+                  padding: "10px 20px",
+                }}
+              >
+                <i
+                  className={`bx ${item.icon}`}
+                  style={{
+                    fontSize: "1.8rem",
+                    minWidth: "30px",
+                  }}
+                ></i>
+                {isToggled && <span>{item.label}</span>}
+              </a>
+            </li>
+          ))}
         </ul>
 
-        {/* Floating Toggle Button */}
-        <button
-          onClick={handleToggle}
-          className="btn btn-secondary position-absolute"
-          style={{
-            top: "10%",
-            right: "-20px",
-            zIndex: 10,
-            fontSize: "0.8rem",
-          }}
-        >
-          {isToggled ? "<" : ">"}
-        </button>
+        {/* Dark Mode & Settings */}
+        <div className="p-3 d-flex flex-column gap-3 align-items-center">
+          <button
+            onClick={toggleDarkMode}
+            className="btn btn-light d-flex align-items-center justify-content-center w-100"
+          >
+            <i
+              className={`bx ${darkMode ? "bx-sun" : "bx-moon"}`}
+              style={{ fontSize: "1.8rem" }}
+            ></i>
+            {isToggled && (
+              <span className="ms-2">
+                {darkMode ? "Light Mode" : "Dark Mode"}
+              </span>
+            )}
+          </button>
+          <button className="btn btn-primary d-flex align-items-center justify-content-center w-100">
+            <i className="bx bx-cog" style={{ fontSize: "1.8rem" }}></i>
+            {isToggled && <span className="ms-2">Settings</span>}
+          </button>
+        </div>
       </div>
 
-      {/* Main Content */}
-      <div className="flex-grow-1 p-4">
-        <h1>Main Content</h1>
-        <p>This is where the main content will go.</p>
-      </div>
+      {/* Floating Toggle Button */}
+      <button
+        onClick={handleToggle}
+        className="btn btn-light position-absolute rounded-circle shadow-sm"
+        style={{
+          top: "50px",
+          left: isToggled ? "180px" : "70px",
+          zIndex: 10,
+          transition: "all 0.3s ease",
+        }}
+      >
+        {isToggled ? "<" : ">"}
+      </button>
     </div>
   );
 };

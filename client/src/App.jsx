@@ -11,16 +11,21 @@ const App = () => {
       <div className="d-flex">
         <Sidebar />
 
-        <div className="flex-grow-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-          </Routes>
+        <div className="flex-grow-1 overflow-auto main-content" style={{height: "100vh" }}>
+          <div className="top-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Routes>
+          </div>
+          <div className="bottom-content">
+            <Footer />
+          </div>
         </div>
-        <Footer />
       </div>
     </Router>
   );
 };
+
 
 export default App;

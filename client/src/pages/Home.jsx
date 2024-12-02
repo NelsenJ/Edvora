@@ -14,13 +14,11 @@ import Quotes from '../components/Home/Quotes';
 
 const Home = () => {
   return (
-    <Sidebar>
-      <Intro/>
-      <Consultan/>
-      <Testimoni/>
-      <Quotes/>
-      <Footer />
-    </Sidebar>
+    <Intro/>
+    <Consultan/>
+    <Testimoni/>
+    <Quotes/>
+    <Footer />
   );
 };
 

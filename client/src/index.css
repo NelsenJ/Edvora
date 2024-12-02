@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --sky-blue: rgb(125, 175, 254);
+    --dark-blue: rgb(31, 80, 154);
+    --light-blue: rgb(187, 230, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--light-blue);
+}
+
+footer .footer-top{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.footer-about{
+    width: 20vw;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img{
+    --size: 5rem;
+    width: var(--size);
+    height: calc(var(--size)/1.2);
+}
+
+.footer-logo h5{
+    font-weight: 700;
+}
+
+.footer-about p{
+    color: gray;
+    text-align: justify;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: gray;
+}

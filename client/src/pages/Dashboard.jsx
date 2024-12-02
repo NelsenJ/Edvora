@@ -5,7 +5,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Fetch data from backend
-    fetch('http://localhost:5000/api') // Match your server.js route
+    fetch('http://localhost:5000/api')
       .then((response) => response.json())
       .then((data) => setApiMessage(data.message))
       .catch((error) => console.error('Error:', error));

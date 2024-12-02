@@ -31,8 +31,9 @@ const Sidebar = () => {
       <div
         className={`vh-100 d-flex flex-column shadow ${
           darkMode ? "bg-dark text-white" : "bg-white text-dark"
-        }`}
+        } position-sticky`}
         style={{
+          top: 0, // Menjaga posisi sidebar tetap di atas saat scroll
           minWidth: isToggled ? "200px" : "80px",
           transition: "min-width 0.3s ease",
         }}

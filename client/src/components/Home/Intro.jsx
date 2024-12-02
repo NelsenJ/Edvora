@@ -8,7 +8,7 @@ export default function Intro() {
     return(
         <>
             <section className="intro">
-                <div className="intro-text mt-5">
+                <div className="intro-text mt-5 px-3">
                     <h1 className='heading'>
                         The <span className="blue-highlight">First Choice</span> To The Best <span className="blue-highlight">Future</   span>
                     </h1>

@@ -62,3 +62,21 @@ footer .footer-top{
     text-decoration: none;
     color: gray;
 }
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1000; /* Pastikan di atas konten lainnya */
+}
+.main-content {
+    overflow-y: auto;
+}
+
+div.main-content .top-content{
+    padding: 30px;
+}
+
+footer{
+    padding: 20px 30px 5px 30px;
+}

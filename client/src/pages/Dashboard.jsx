@@ -1,14 +1,21 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Button from '../components/Button';
+import React, { useEffect, useState } from 'react';
 
 const Dashboard = () => {
+  const [apiMessage, setApiMessage] = useState('');
+
+  useEffect(() => {
+    // Fetch data from backend
+    fetch('http://localhost:5000/api') // Match your server.js route
+      .then((response) => response.json())
+      .then((data) => setApiMessage(data.message))
+      .catch((error) => console.error('Error:', error));
+  }, []);
+
   return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
+    <div>
+      <h1>Dashboard</h1>
+      <p>Message from Backend: {apiMessage}</p>
+    </div>
   );
 };
 

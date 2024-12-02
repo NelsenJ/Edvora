@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const Sidebar = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -82,37 +84,38 @@ const Sidebar = () => {
         </div>
 
         {/* Navigation Links */}
-        <ul className="list-unstyled flex-grow-1 d-flex flex-column align-items-center">
-          {menuItems.map((item, index) => (
-            <li
-              key={index}
-              className="w-100"
-              style={{
-                textAlign: "left",
-                paddingLeft: "7px", // Menjaga posisi ikon tetap stabil
-                transition: "all 0.3s ease",
-              }}
-            >
-              <a
-                href={item.link}
-                className="d-flex align-items-center text-decoration-none"
+          <ul className="list-unstyled flex-grow-1 d-flex flex-column align-items-center">
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                className="w-100"
                 style={{
-                  gap: "25px",
-                  padding: "10px 20px",
+                  textAlign: "left",
+                  paddingLeft: "7px", // Keeps the icon position stable
+                  transition: "all 0.3s ease",
                 }}
               >
-                <i
-                  className={`bx ${item.icon}`}
+                <Link
+                  to={item.link}
+                  className="d-flex align-items-center text-decoration-none"
                   style={{
-                    fontSize: "1.8rem",
-                    minWidth: "30px",
+                    gap: "25px",
+                    padding: "10px 20px",
                   }}
-                ></i>
-                {isToggled && <span>{item.label}</span>}
-              </a>
-            </li>
-          ))}
-        </ul>
+                >
+                  <i
+                    className={`bx ${item.icon}`}
+                    style={{
+                      fontSize: "1.8rem",
+                      minWidth: "30px",
+                    }}
+                  ></i>
+                  {isToggled && <span>{item.label}</span>}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
 
         {/* Dark Mode & Settings */}
         <div className="p-3 d-flex flex-column gap-3 align-items-center">

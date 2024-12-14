@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Academy from './pages/Academy';
+import KelasDetail from './pages/KelasDetail';  // Pastikan import benar
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 
@@ -18,6 +19,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/academy" element={<Academy />} />
+              <Route path="/academy/:id" element={<KelasDetail />} />  {/* Tambahkan route dengan parameter */}
             </Routes>
           </div>
           <div className="bottom-content">
@@ -28,6 +30,5 @@ const App = () => {
     </Router>
   );
 };
-
 
 export default App;

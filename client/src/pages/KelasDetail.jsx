@@ -7,15 +7,14 @@ import Sidebar from '../components/Sidebar';
 import Button from '../components/Button';
 
 // Pages Components
-import AcademyIndex from '../components/Academy/Academy';
 import KelasDetail from '../components/Academy/KelasDetail';
 
-const Academy = () => {
+const Kelas = () => {
   return (
     <>
-        <AcademyIndex />
+        <KelasDetail />
     </>
   );
 };
 
-export default Academy;
+export default Kelas;

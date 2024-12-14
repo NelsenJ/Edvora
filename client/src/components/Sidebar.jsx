@@ -16,7 +16,7 @@ const Sidebar = () => {
 
   const menuItems = [
     { icon: "bx-grid-alt", label: "Dashboard", link: "/dashboard" },
-    { icon: "bx-line-chart", label: "Analytics", link: "/analytics" },
+    { icon: "bxs-school", label: "Academy", link: "/academy" },
     { icon: "bx-folder", label: "Projects", link: "/projects" },
     { icon: "bx-task", label: "Tasks", link: "/tasks" },
     { icon: "bx-message-dots", label: "Messages", link: "/messages" },

@@ -44,7 +44,7 @@ const Sidebar = () => {
           style={{ transition: "all 0.3s ease" }}
         >
           <img
-            src="/logo.png"
+            src="/img/logo.png"
             alt="Logo"
             style={{
               width: "50px",

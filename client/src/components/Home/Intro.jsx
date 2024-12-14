@@ -33,7 +33,7 @@ export default function Intro() {
                     </div>
                     <div className="box-card-desc">
                         <h1>Free Access All  Course</h1>
-                        <p>Belajar fokus pada konsep hingga benar-benar diluar kepala, bukan sekadar menghafal rumus atau trik cepat.</p>
+                        <p>Akses semua kursus gratis dan pelajari dengan mendalam, fokus pada pemahaman konsep, bukan sekadar hafalan atau cara instan.</p>
                     </div>
                 </div>
                 <div className="box-card">
@@ -43,7 +43,7 @@ export default function Intro() {
                     <div className="box-card-desc">
                         <h1>Access for everyone 
                         and everywhere</h1>
-                        <p>Edvora  tidak pengen kalian lulus ujian aja, tapi juga pengen kalian cerdas beneran buat bekal di masa depan.</p>
+                        <p>Belajar jadi lebih mudah dengan akses gratis untuk semua, kapan saja, dan di mana saja. Fokus pada pemahaman, bukan sekadar hafalan.</p>
                     </div>
                 </div>
                 <div className="box-card">
@@ -52,7 +52,7 @@ export default function Intro() {
                     </div>
                     <div className="box-card-desc">
                         <h1>Learning with game experience</h1>
-                        <p>Guru Edvora tuh friendy dan passion ngajar, jadinya seru abis,ga bikin ngantuk. Kadang pada sampe lupa kalo lagi belajar:p</p>
+                        <p>Rasakan belajar seru seperti bermain game, fokus pada pemahaman konsep sambil menikmati pengalaman interaktif dan menyenangkan.</p>
                     </div>
                 </div>
             </section>

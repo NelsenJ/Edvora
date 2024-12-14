@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css'
-import logo from "../../public/logo.png"
+import logo from "../../public/img/logo.png"
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-about">
           <div className="footer-logo">
             <img src={logo} alt="edvora logo"/>
-            <h5>Edivo</h5>
+            <h5>Edvora</h5>
           </div>
           <p>
             Edvora adalah platform nonprofit dengan misi memberikan edukasi yang  bermutu untuk siapapun, dimanapun.
